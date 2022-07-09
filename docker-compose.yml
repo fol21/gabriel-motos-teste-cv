@@ -1,0 +1,32 @@
+version: "3.9"  # optional since v1.27.0
+services:
+
+  api:
+    build: ./api/motos-classification-api
+    ports:
+      - "3000:3000"
+  
+  train:
+    build: ./train-service
+    ports:
+      - "5000:5000"
+
+  pg:
+    image: postgres
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=pg@1234
+    volumes:
+      - ./.docker/pg/:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 15432:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@mail.com
+      - PGADMIN_DEFAULT_PASSWORD=admin@1234
+    volumes:
+      - ./.docker/pgadmin4:/var/lib/pgadmin

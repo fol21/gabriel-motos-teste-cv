@@ -8,4 +8,4 @@ def tensorflow_version():
     return tf.version.VERSION
 
 if __name__ == '__main__':
-   app.run('localhost', 3000, debug=True)
+   app.run('localhost', 5000, debug=True)
