@@ -7,6 +7,10 @@ COPY ./env/requirements.txt .
 RUN python -m pip install -r requirements.txt
 
 # Run the application:
-COPY ./env/src .
+COPY ./models/ ./models
+COPY ./env/src/ ./src
+COPY ./classes.json .
 COPY ./env/app.py .
+
+EXPOSE 5100
 CMD ["python", "app.py"]

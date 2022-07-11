@@ -1,0 +1,11 @@
+{
+    "training": {
+        "url": "http://localhost:5000"
+    },
+    "classification": {
+        "url": "http://localhost:5100"
+    },
+    "pg": {
+        "logging": false
+    }
+}
