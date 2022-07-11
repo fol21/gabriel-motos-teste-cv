@@ -6,10 +6,15 @@ services:
     ports:
       - "3000:3000"
   
-  train:
-    build: ./train-service
-    ports:
-      - "5000:5000"
+  # training:
+  #   build: ./train-service
+  #   ports:
+  #     - "5000:5000"
+
+  classification:
+    build: ./classification-service
+    # ports:
+    #   - "5100:5100"
 
   pg:
     image: postgres

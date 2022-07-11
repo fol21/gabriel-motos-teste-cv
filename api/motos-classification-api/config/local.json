@@ -1,0 +1,6 @@
+{
+    "pg": {
+        "url": "postgresql://postgres:pg@1234@localhost:5432/postgres",
+        "logging": "all"
+    }
+}

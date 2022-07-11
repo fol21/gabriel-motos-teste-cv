@@ -1,0 +1,12 @@
+{
+    "training": {
+        "url": "http://classification:5000"
+    },
+    "classification": {
+        "url": "http://classification:5100"
+    },
+    "pg": {
+        "url": "postgresql://postgres:pg@1234@pg:5432/postgres",
+        "logging": ["error", "info", "log"]
+    }
+}
