@@ -37,12 +37,14 @@ A aplicação inicia, entre outros, um container cotando a API com rotas para ac
 Para realizar a predição, basta enviar uma imagem em base 64 como descrito na requisão  abaixo:
 
 ````http
+
 POST http://localhost:3000/classification/predict HTTP/1.1
 Content-Type: application/json
 
 {
     "base64": "iVBORw0KGgoAAAANSUhEUgAAAUAAAADgCAIAAAD9mSinAAAgAElEQVR4AbTBabSl51ke6Pt532/ce5..."
 }
+
 ````
 
 A resposta da requisição retornará um JSON no formato:
