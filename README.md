@@ -67,6 +67,8 @@ A resposta da requisição retornará um JSON no formato:
 }
 ````
 
+A pasta ````http```` conta com exemplos prontos que podem ser usado pelo RestClient no Vscode.
+
 ## Classificação - Teste 1
 
 Para classificação das imagens, utilizaremos um modelo baseado na [EfficientNet](https://arxiv.org/pdf/1905.11946v5.pdf). Uma arquitetura de rede neural convolucional e um método de dimensionamento que dimensiona uniformemente todas as dimensões de profundidade/largura/resolução usando um coeficiente composto. 
@@ -102,5 +104,10 @@ Para realizar a Infraestrtura foi proposta uma arquitetura de sistemas distribui
 ***obs:*** *Nessa prova de conceito toda a infra encontra-se dentro de um ambiente docker unificado para fins de demosnração e simplicidade de apresentação do conceito.*
 
 ![Arquitetura do Sistema](docs/motos-arch-Page-1.drawio.png)
+
+Para Fins de controle de um ou mais Modelos, podemos persistir os dados em um banco como o Postgres, extremamente efixaz e escalável. Cada treinamento gera uma entrada a partir de um modelo compactado e armazenado no banco, assim como o registro do desempenho nos datasets de treino e teste. Abaixo segue o diagrama de relação de entidades do banco, no qual pode ser colocado em ferramentas como o *Enterprise Architect* para gerar scirpts de criação de forma visual.
+
+![Diagrama de ER](docs/motos-arch-Page-2.drawio.png)
+
 
 
